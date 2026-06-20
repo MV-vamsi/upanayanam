@@ -42,10 +42,8 @@ transition:2s;
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 
-    text-shadow:
-        0 0 3px #fff,
-        0 0 8px #8a2be2,
-        2px 2px 0 #ff0033;
+  text-shadow:
+    1px 1px 0 #ff0033;  
 }
 
 .main-title{
@@ -54,19 +52,17 @@ transition:2s;
     line-height:1.1;
 
     background:linear-gradient(
-        to bottom,
-        #ffffff 0%,
-        #ffd6ff 40%,
-        #ff0066 100%
-    );
+    to bottom,
+    #ffffff,
+    #ffd6ff,
+    #ff0033
+);
 
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 
-    text-shadow:
-        0 0 5px #fff,
-        0 0 15px #6a0dad,
-        3px 3px 0 #ff0033;
+text-shadow:
+    2px 2px 0 #ff0033;
 
     margin-bottom:30px;
 }
