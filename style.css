@@ -27,3 +27,56 @@ transition:2s;
 #invite{display:none;padding:20px}
 #invite img{max-width:95%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.3)}
 #countdown{margin:20px;font-size:22px;font-weight:bold}
+.small-title{
+    font-size:38px;
+    font-weight:bold;
+    margin-bottom:10px;
+
+    background:linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #ffb6ff 45%,
+        #ff0033 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 0 3px #fff,
+        0 0 8px #8a2be2,
+        2px 2px 0 #ff0033;
+}
+
+.main-title{
+    font-size:72px;
+    font-weight:bold;
+    line-height:1.1;
+
+    background:linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #ffd6ff 40%,
+        #ff0066 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 0 5px #fff,
+        0 0 15px #6a0dad,
+        3px 3px 0 #ff0033;
+
+    margin-bottom:30px;
+}
+
+#countdown{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin:30px 0;
+    font-size:20px;
+    font-weight:bold;
+    color:#ffd700;
+}
