@@ -14,7 +14,7 @@ background:#6b3e26;
 background-size:cover;
 background-position:center;
 border:4px solid #d4af37;
-transition:2s;}
+transition:2s;
 }
 .left{left:0}.right{right:0}
 .open .left{transform:translateX(-100%)}
