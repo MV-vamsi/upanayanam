@@ -17,8 +17,13 @@ function tick() {
     const minutes = Math.floor((diff / (1000 * 60)) % 60);
     const seconds = Math.floor((diff / 1000) % 60);
 
-    document.getElementById('countdown').innerText =
-        `${days} Days ${hours} Hrs ${minutes} Mins ${seconds} Sec`;
+    document.getElementById('countdown').innerHTML =
+`
+<div>${days}<br>Days</div>
+<div>${hours}<br>Hours</div>
+<div>${minutes}<br>Minutes</div>
+<div>${seconds}<br>Seconds</div>
+`;
 }
 tick();
 setInterval(tick, 1000);
