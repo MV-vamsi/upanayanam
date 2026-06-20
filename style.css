@@ -105,23 +105,70 @@ body{
         2px 2px 0 #ff0033;
 }
 
-/* COUNTDOWN */
+/* Countdown Container */
 
 #countdown{
-
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-
-    gap:15px;
-
+    gap:12px;
     margin:25px 0;
-
-    color:#ffd700;
-    font-size:18px;
-    font-weight:bold;
 }
 
+/* Individual Box */
+
+.time-box{
+    width:90px;
+    height:90px;
+
+    background:rgba(255,255,255,0.15);
+
+    border:2px solid #c99500;
+    border-radius:12px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+    inset 0 0 10px rgba(201,149,0,.3),
+    0 0 8px rgba(0,0,0,.15);
+}
+
+/* Number */
+
+.time-number{
+    font-size:42px;
+    font-weight:bold;
+    color:#222;   /* Dark Black */
+}
+
+/* Label */
+
+.time-label{
+    font-size:15px;
+    font-weight:600;
+    color:#333;   /* Dark Black */
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .time-box{
+        width:70px;
+        height:70px;
+    }
+
+    .time-number{
+        font-size:28px;
+    }
+
+    .time-label{
+        font-size:12px;
+    }
+}
 /* BUTTON */
 
 button{
