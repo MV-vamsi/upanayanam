@@ -20,6 +20,5 @@ function tick() {
     document.getElementById('countdown').innerText =
         `${days} Days : ${hours} Hours : ${minutes} Minutes : ${seconds} Seconds`;
 }
-
 tick();
 setInterval(tick, 1000);
