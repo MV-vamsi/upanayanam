@@ -7,7 +7,6 @@ function openInvite(){
  },2000);
 }
 const target = new Date('2026-07-01T07:05:00');
-
 function tick() {
     const now = new Date();
     const diff = target - now;
