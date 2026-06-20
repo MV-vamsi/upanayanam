@@ -1,172 +1,184 @@
-body{
+*{
     margin:0;
-    font-family:sans-serif;
-    background:#f7efe2;
+    padding:0;
+    box-sizing:border-box;
 }
 
-#welcome,
-#invite{
+body{
+    font-family:sans-serif;
+    overflow-x:hidden;
+    background:#f8f2e8;
+}
+
+/* FIRST PAGE */
+
+#welcome{
     min-height:100vh;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
+    position:relative;
+    overflow:hidden;
 }
 
-.center{
-    text-align:center;
-    z-index:5;
-    padding:20px;
-}
+/* POSTER SPLIT */
 
-h1,h2{
-    color:#7a1f1f;
-}
-
-button{
-    padding:14px 28px;
-    border:none;
-    border-radius:30px;
-    background:#b8860b;
-    color:#fff;
-    font-size:18px;
-    cursor:pointer;
-}
-
-/* Door Animation */
-
-.doors{
+.poster{
     position:fixed;
-    inset:0;
-    pointer-events:none;
-}
-
-.door{
-    position:absolute;
-    top:0;
-    width:50%;
-    height:100%;
+    left:0;
+    width:100%;
+    height:50%;
 
     background-image:url('door-bg.jpg');
     background-size:cover;
-    background-position:center;
     background-repeat:no-repeat;
 
-    transition:2s;
+    transition:2s ease-in-out;
+    z-index:1;
 }
 
-.left{
-    left:0;
+.top-half{
+    top:0;
+    background-position:top center;
 }
 
-.right{
-    right:0;
+.bottom-half{
+    bottom:0;
+    background-position:bottom center;
 }
 
-.open .left{
-    transform:translateX(-100%);
+.open .top-half{
+    transform:translateY(-100%);
 }
 
-.open .right{
-    transform:translateX(100%);
+.open .bottom-half{
+    transform:translateY(100%);
 }
 
-/* Invitation */
+/* CENTER CONTENT */
 
-#invite{
-    display:none;
-    padding:20px;
+.center{
+    text-align:center;
+    position:relative;
+    z-index:5;
+    width:90%;
 }
-
-#invite img{
-    max-width:95%;
-    border-radius:12px;
-    box-shadow:0 4px 20px rgba(0,0,0,.3);
-}
-
-/* Title */
 
 .small-title{
-    font-size:40px;
+
+    font-size:34px;
     font-weight:bold;
-    margin-bottom:10px;
 
     background:linear-gradient(
         to bottom,
-        #ffffff 0%,
-        #ffb6ff 40%,
-        #ff0033 100%
+        #ffffff,
+        #ffd6ff,
+        #ff0033
     );
 
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 
     text-shadow:
-    1px 1px 0 #ffffff,
-    2px 2px 0 #ff0033;
+        1px 1px 0 #ff0033;
 }
 
 .main-title{
-    font-size:80px;
+
+    font-size:72px;
     font-weight:bold;
     line-height:1.1;
-    margin-bottom:25px;
+
+    margin-top:10px;
 
     background:linear-gradient(
         to bottom,
-        #ffffff 0%,
-        #ffd6ff 45%,
-        #ff0033 100%
+        #ffffff,
+        #ffd6ff,
+        #ff0033
     );
 
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 
     text-shadow:
-    1px 1px 0 #ffffff,
-    2px 2px 0 #ff0033,
-    3px 3px 8px rgba(255,0,51,.4);
+        2px 2px 0 #ff0033;
 }
 
-/* Countdown */
+/* COUNTDOWN */
 
 #countdown{
+
     display:flex;
     justify-content:center;
-    gap:18px;
     flex-wrap:wrap;
 
-    margin:20px 0;
+    gap:15px;
+
+    margin:25px 0;
 
     color:#ffd700;
     font-size:18px;
     font-weight:bold;
 }
 
-/* Mobile */
+/* BUTTON */
 
-@media screen and (max-width:768px){
+button{
 
-    .center{
-        width:92%;
-        padding:10px;
-    }
+    background:#b8860b;
+    color:white;
+
+    border:none;
+    border-radius:40px;
+
+    padding:14px 30px;
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+/* SECOND PAGE */
+
+#invite{
+
+    display:none;
+
+    min-height:100vh;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+#invite img{
+
+    width:100%;
+    max-width:900px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 4px 20px rgba(0,0,0,.3);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
 
     .small-title{
-        font-size:24px;
-        margin-bottom:10px;
+        font-size:22px;
     }
 
     .main-title{
         font-size:42px;
-        line-height:1.15;
-        margin-bottom:15px;
     }
 
     #countdown{
         font-size:14px;
         gap:10px;
-        margin:15px 0;
     }
 
     button{
@@ -174,13 +186,4 @@ button{
         padding:12px 24px;
     }
 
-    #invite img{
-        width:100%;
-        max-width:100%;
-    }
-
-    .door{
-        background-size:cover;
-        background-position:center;
-    }
 }
