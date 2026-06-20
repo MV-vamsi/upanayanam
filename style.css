@@ -10,7 +10,14 @@ position:absolute;
 top:0;
 width:50%;
 height:100%;
-background:#6b3e26;
+background:linear-gradient(
+90deg,
+#4a2c17 0%,
+#6b3e26 20%,
+#8b5a2b 50%,
+#6b3e26 80%,
+#4a2c17 100%
+);
 border:4px solid #d4af37;
 transition:2s;
 }
